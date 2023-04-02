@@ -1,18 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-int main()
+#include<stddef.h>
+struct S
 {
-	int a = 0;
-	int i, k;
-	for (i = 1; i < 10; i++)
-	{
-		for (k = 1; k <=i; k++)
-		{
-			
-			a = i*k;
-			printf("%d*%d=%-3d", i, k, a);
-		}
-		printf("\n");
-	}
-	return 0;
+	char id[10];
+	char name[20];
+	int age;
+};
+void printf1(struct S* tmp)
+{
+	printf("%s %s %d",(*tmp).id,tmp->name,tmp->age );
+}
+int main()
+{     
+	struct S a = { "123", "nihao", 20 };
+	printf1(&a);
+	printf("\n");
+	printf("%d\n", offsetof(struct S, id));
+		printf("%d\n", offsetof(struct S, name));
+	printf("%d\n", offsetof(struct S,age));
 }
