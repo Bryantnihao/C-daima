@@ -2,16 +2,21 @@
 #include<stdio.h>
 int main()
 {
-	int i = 0;
-  	 int sum = 0;
-	for (i = 200; i < 400; i++)
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	for (a = 0; a < 10; a++)
 	{
-		if (i % 3 != 0)
+		for (b = 0; b < 10; b++)
 		{
-			sum = sum + i;
+			for (c = 0; c < 10; c++)
+			{
+				if (a * 100 + b * 10 + c + c * 100 + b * 10 + a == 1333)
+				{
+					printf("a=%d,b=%d,c=%d\n", a, b, c);
+				}
+			}
 		}
 	}
-	printf("%d\n", sum);
-
 	return 0;
 }
