@@ -1,24 +1,26 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-int Sum()
-{    
-	int i = 0;
-	int a = 0;
-	int num = 0;
-	printf("请输入5个数:");
-	for (i = 0; i < 5; i++)
-	{ 
-		
-		scanf("%d", &a);
-		num += a;
-	}
-
-	return num;
-}
 int main()
-{  
-	    
-	int ad = Sum();
-	printf("5个数的和为:%d\n", ad);
+{
+	int i = 0;
+	printf("请打印一个数:");
+	scanf("%d", &i);
+	if (i > 0)
+	{
+		printf("z\n" );
+	}
+     else 
+	{
+		printf("f\n" );
+	}
+if (i % 2 == 0)
+	 {
+		 printf("o\n" );
+	 }
+	  else
+	 {
+		  printf("j\n");
+	 }
 	return 0;
 }
+
