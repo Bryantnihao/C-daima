@@ -2,16 +2,23 @@
 #include<stdio.h>
 int main()
 {   
-	int sum = 0;
+	 
 	int i = 0;
-	for (i = 0; i < 200; i++)
+	int j = 0;
+	int sum = 0;
+	int  max = 0;
+	printf("打印5个数");
+	for (i = 0; i < 5; i++)
 	{
-		if (i % 5 != 0)
-		{
-			sum +=i;
+		scanf("%d", &j);
+		sum += j;
+		if (j>max)
+		{ 
+			max = j;
 		}
 	}
-	printf("%d\n", sum);
+	float veg = (float)sum / 5;
+	printf("这5个数的平均值%lf,最大值:%d\n", veg, max);
 	return 0;
 }
 
